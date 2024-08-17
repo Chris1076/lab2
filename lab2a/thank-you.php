@@ -4,13 +4,16 @@ require "helpers/helper-functions.php";
 
 session_start();
 
-$contact_number = $_POST['contact_number'];
-$program = $_POST['program'];
+$email = $_POST['email'];
+$pass = $_POST['password'];
+$password = hash('sha1', $pass);
 $agree = $_POST['agree'];
+$year = getdate();
 
-$_SESSION['contact_number'] = $contact_number;
-$_SESSION['program'] = $program;
+$_SESSION['email'] = $email;
+$_SESSION['password'] = $password;
 $_SESSION['agree'] = $agree;
+$_SESSION['age'] = $year['year'] - $_SESSION['birthyear'];
 
 $form_data = $_SESSION;
 
