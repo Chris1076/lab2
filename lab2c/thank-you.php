@@ -17,6 +17,17 @@ $_SESSION['age'] = $year['year'] - $_SESSION['birthyear'];
 
 $form_data = $_SESSION;
 
+$entry = array(array($_SESSION['fullname'], $_SESSION['birthdate'], $_SESSION['age'], $_SESSION['contact_number'],
+  $_SESSION['sex'], $_SESSION['program'], $_SESSION['address'], $_SESSION['email']
+));
+$file = fopen('registration.csv', 'w');
+
+foreach($entry as $fields){
+    fputcsv($file, $fields);
+}
+
+fclose($file);
+
 dump_session();
 
 session_destroy();
