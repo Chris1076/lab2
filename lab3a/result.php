@@ -7,19 +7,24 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Supply the missing code
-$complete_name = $_POST['complete_name'];
+$complete_name = $_POST['completename'];
 $email = $_POST['email'];
 $birthdate = $_POST['birthdate'];
 $contact_number = $_POST['contact_number'];
 $agree = $_POST['agree'];
-$answer = $_POST['answer'] ?? null;
-$answers = $_POST['answers'] ?? null;
-if (!is_null($answer)) {
-    $answers .= $answer;
-}
+$answer1 = $_POST['answer1'] ?? 'O';
+$answer2 = $_POST['answer2'] ?? 'O';
+$answer3 = $_POST['answer3'] ?? 'O';
+$answer4 = $_POST['answer4'] ?? 'O';
+$answer5 = $_POST['answer5'] ?? 'O';
 
+// $answers = $_POST['answers'] ?? null;
+// if (!is_null($answer)) {
+//     $answers .= $answer;
+// }
+$answers = [$answer1, $answer2, $answer3, $answer4, $answer5];
 // Use the compute_score() function from helpers.php
-// $score = compute_score($answers);
+$score = compute_score($answers);
 ?>
 <html>
 <head>
@@ -30,9 +35,9 @@ if (!is_null($answer)) {
     <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
 </head>
 <body>
-<section class="hero">
+<section class="hero <?php if($score >= 3){echo "is-success";}else{echo "is-danger";}?>">
     <div class="hero-body">
-        <p class="title">Your Score <?php echo $score; ?></p>
+        <p class="title">Your Score is <?php echo $score; ?></p>
         <p class="subtitle">This is the IPT10 PHP Quiz Web Application Laboratory Activity.</p>
     </div>
 </section>
@@ -67,12 +72,19 @@ if (!is_null($answer)) {
     <canvas id="confetti-canvas"></canvas>
 </section>
 
+<script src="scripts.js"></script>
 <script>
 var confettiSettings = {
     target: 'confetti-canvas'
 };
 var confetti = new ConfettiGenerator(confettiSettings);
-confetti.render();
+
+
+<?php
+if($score == 5){
+    echo "confetti.render();";
+}
+?>
 </script>
 </body>
 </html>

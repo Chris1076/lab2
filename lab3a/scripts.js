@@ -18,3 +18,11 @@ function ontype(){
         document.getElementById('submitBtn').disabled = false;
     }
 }
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+async function timer(){
+        await sleep(60000);
+    var button = document.getElementById('submitQuiz');
+    button.click();
+}

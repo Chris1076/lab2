@@ -35,7 +35,8 @@ $contact_number = $_POST['contact_number'];
 
         <!-- Display the instruction -->
         <p>
-        This quiz has 5 questions each and is in multiple choice format. Choose the best answer from the choices.
+        This quiz has 5 questions each and is in multiple choice format. Choose the best answer from the choices. 
+        You only have 60 seconds to answer this quiz. Good luck!
         </p>
 
         <div class="field">

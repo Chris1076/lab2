@@ -1,6 +1,6 @@
 <?php
 
-define('MAX_QUESTION_NUMBER', 50);
+define('MAX_QUESTION_NUMBER', 5);
 
 function retrieve_questions() {
     // 1. Open the questions/triviaquiz.json file
@@ -13,15 +13,15 @@ function retrieve_questions() {
     return $json_data;
 }
 
-function get_current_question($answers = '') {
-    $number_of_answers = strlen($answers);
+function get_question($number = 0) {
+    // $number_of_answers = strlen($answers);
     $questions = retrieve_questions();
-    return $questions['questions'][$number_of_answers];
+    return $questions['questions'][$number - 1];
 }
 
-function get_current_question_number($answers = '') {
-    return strlen($answers) + 1;
-}
+// function get_current_question_number($answers = '') {
+//     return strlen($answers) + 1;
+// }
 
 function get_options_for_question_number($number = 0) {
     $questions = retrieve_questions();
