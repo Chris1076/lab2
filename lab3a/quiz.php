@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Supply the missing code
-$complete_name = $_POST['completename'];
+$complete_name = $_POST['complete_name'];
 $email = $_POST['email'];
 $birthdate = $_POST['birthdate'];
 $contact_number = $_POST['contact_number'];
