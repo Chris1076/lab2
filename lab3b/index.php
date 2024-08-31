@@ -23,9 +23,9 @@
 
     <form>
         <div class="p-card">
-            <h3>Text File</h3>
+            <h3>MP3 File</h3>
             <p class="p-card__content">
-            <input type="file" name="text_file" accept=".txt" />
+            <input type="file" name="audio_file" accept=".mp3" />
             </p>
         </div>
 
