@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>IPT10 Laboratory Activity #2</title>
+    <title>IPT10 Laboratory Activity #3b</title>
     <link rel="icon" href="https://phpsandbox.io/assets/img/brand/phpsandbox.png">
     <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-4.15.0.min.css" />   
 </head>
@@ -21,7 +21,7 @@
   <div class="col">
     <h4>File Upload</h4>
 
-    <form>
+    <form method="POST" action="uploaded.php" enctype="multipart/form-data">
         <div class="p-card">
             <h3>MP3 File</h3>
             <p class="p-card__content">
@@ -30,7 +30,7 @@
         </div>
 
         <div>
-            <button>
+            <button type="submit">
                 Upload
             </button>
         </div>
