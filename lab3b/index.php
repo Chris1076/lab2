@@ -27,7 +27,6 @@
             <input type="file" name="text_file" accept=".txt" />
             </p>
         </div>
-
         <div>
             <button type="submit">
                 Upload
@@ -66,6 +65,7 @@
             <p class="p-card__content">
             <input type="file" name="img_file" accept="image/*" />
             </p>
+        </div>
         <div>
             <button type="submit">
                 Upload
