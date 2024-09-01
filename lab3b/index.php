@@ -27,7 +27,18 @@
             <input type="file" name="audio_file" accept=".mp3" />
             </p>
         </div>
-
+        <div>
+            <button type="submit">
+                Upload
+            </button>
+        </div>
+    </form>
+    <form method="POST" action="uploaded-img.php" enctype="multipart/form-data">
+        <div class="p-card">
+            <h3>Image File</h3>
+            <p class="p-card__content">
+            <input type="file" name="img_file" accept="image/*" />
+            </p>
         <div>
             <button type="submit">
                 Upload
@@ -39,10 +50,8 @@
             <h3>PDF File</h3>
             <p class="p-card__content">
             <input type="file" name="pdf_file" accept=".pdf" />
-
             </p>
         </div>
-
         <div>
             <button type="submit">
                 Upload
