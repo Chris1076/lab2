@@ -21,7 +21,7 @@
   <div class="col">
     <h4>File Upload</h4>
 
-    <form method="POST" action="uploaded.php" enctype="multipart/form-data">
+    <form method="POST" action="uploaded-audio.php" enctype="multipart/form-data">
         <div class="p-card">
             <h3>MP3 File</h3>
             <p class="p-card__content">
