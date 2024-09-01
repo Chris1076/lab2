@@ -30,7 +30,6 @@ if (move_uploaded_file($temporary_file, $uploaded_audio_file)) {
     echo '<p>Failed to upload file</p>';
 }
 ?>
- </object>
   </body>
 </html>
 <!-- echo '<pre>';
