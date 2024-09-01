@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>IPT10 Laboratory Activity #2</title>
+    <title>IPT10 Laboratory Activity #3b</title>
     <link rel="icon" href="https://phpsandbox.io/assets/img/brand/phpsandbox.png">
     <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-4.15.0.min.css" />   
 </head>
@@ -19,18 +19,18 @@
 
 <div class="row--50-50 grid-demo">
   <div class="col">
-    <h4>File Upload</h4>
+    <h4>Video Upload</h4>
 
-    <form>
+    <form method="POST" action="uploaded-video.php" enctype="multipart/form-data">
         <div class="p-card">
-            <h3>Text File</h3>
+            <h3>Video File</h3>
             <p class="p-card__content">
-            <input type="file" name="text_file" accept=".txt" />
+            <input type="file" name="video_file" accept="video/.mp4" />
             </p>
         </div>
 
         <div>
-            <button>
+            <button type="submit">
                 Upload
             </button>
         </div>
